@@ -29,21 +29,19 @@
                     <p><a :href="file.url" target="_blank">{{ file.originalName }}</a></p>
                     <br>
                     <p>
-                        <a href="#" @click.prevent="prevIndex(index)"
-                           class="text-danger hover:font-bold no-underline mb-2">
+                        <a href="#" @click.prevent="prevIndex(index)" v-if="index > 0"
+                           class="text-info hover:font-bold no-underline mb-2">
                             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                                  clip-rule="evenodd">
                                 <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"/>
                             </svg>
-                            <
                         </a>
-                        <a href="#" @click.prevent="nextIndex(index)"
+                        <a href="#" @click.prevent="nextIndex(index)" v-if="index < (this.files.length - 1)"
                            class="text-danger hover:font-bold no-underline mb-2">
                             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                                  clip-rule="evenodd">
                                 <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
                             </svg>
-                            >
                         </a>
                         <a href="#" @click.prevent="deleteImage(index)"
                            class="text-danger hover:font-bold no-underline mb-2">
