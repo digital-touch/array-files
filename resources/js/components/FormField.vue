@@ -30,7 +30,7 @@
                     <br>
                     <p>
                         <a href="#" @click.prevent="prevIndex(index)" v-if="files ? index > 0 : false"
-                           class="text-info hover:font-bold no-underline mb-2">
+                           class="text-black hover:font-bold no-underline mb-2 flex-grow-1">
                             <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                                  clip-rule="evenodd" viewBox="0 0 24 24">
                                 <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"/>
@@ -38,7 +38,7 @@
                             {{__('Pop File Index')}}
                         </a>
                         <a href="#" @click.prevent="nextIndex(index)" v-if="files ? index < (files.length - 1):false"
-                           class="text-danger hover:font-bold no-underline mb-2">
+                           class="text-black hover:font-bold no-underline mb-2 flex-grow-1">
                             <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                                  viewBox="0 0 24 24"
                                  clip-rule="evenodd">
@@ -47,7 +47,7 @@
                             {{__('Push File Index')}}
                         </a>
                         <a href="#" @click.prevent="deleteImage(index)"
-                           class="text-danger hover:font-bold no-underline mb-2">
+                           class="text-danger hover:font-bold no-underline mb-2 flex-grow-1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                  stroke-linejoin="round" class="feather feather-trash-2">
