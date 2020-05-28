@@ -1,10 +1,9 @@
 <template>
-
-    <span><p v-for="file in JSON.parse(field.value)"><a :href="file.url">{{ file.originalName }}</a><br/></p><br>{{ field.value }}</span>
+    <span><p class="p-2 m-2 rounded shadow-md" v-for="file in JSON.parse(field.value)"><a :href="file.url">{{ file.originalName }}</a></p><br>{{ field.value }}</span>
 </template>
 
 <script>
-export default {
-    props: ['resourceName', 'field'],
-}
+    export default {
+        props: ['resourceName', 'field'],
+    }
 </script>

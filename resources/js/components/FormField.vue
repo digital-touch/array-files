@@ -31,14 +31,14 @@
                     <p>
                         <a href="#" @click.prevent="prevIndex(index)" v-if="files ? index > 0 : false"
                            class="text-info hover:font-bold no-underline mb-2">
-                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                                  clip-rule="evenodd">
                                 <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"/>
                             </svg>
                         </a>
                         <a href="#" @click.prevent="nextIndex(index)" v-if="files ? index < (files.length - 1):false"
                            class="text-danger hover:font-bold no-underline mb-2">
-                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                                  clip-rule="evenodd">
                                 <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
                             </svg>
@@ -53,7 +53,7 @@
                                 <line x1="10" y1="11" x2="10" y2="17"></line>
                                 <line x1="14" y1="11" x2="14" y2="17"></line>
                             </svg>
-                            delete
+                            {{__('Delete file', 'Usuń')}}
                         </a>
                     </p>
                 </div>
