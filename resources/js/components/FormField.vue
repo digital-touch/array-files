@@ -32,16 +32,19 @@
                         <a href="#" @click.prevent="prevIndex(index)" v-if="files ? index > 0 : false"
                            class="text-info hover:font-bold no-underline mb-2">
                             <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
-                                 clip-rule="evenodd">
+                                 clip-rule="evenodd" viewBox="0 0 24 24">
                                 <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"/>
                             </svg>
+                            {{__('Pop File Index')}}
                         </a>
                         <a href="#" @click.prevent="nextIndex(index)" v-if="files ? index < (files.length - 1):false"
                            class="text-danger hover:font-bold no-underline mb-2">
                             <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                 viewBox="0 0 24 24"
                                  clip-rule="evenodd">
                                 <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
                             </svg>
+                            {{__('Push File Index')}}
                         </a>
                         <a href="#" @click.prevent="deleteImage(index)"
                            class="text-danger hover:font-bold no-underline mb-2">
@@ -53,7 +56,7 @@
                                 <line x1="10" y1="11" x2="10" y2="17"></line>
                                 <line x1="14" y1="11" x2="14" y2="17"></line>
                             </svg>
-                            {{__('Delete file', 'Usuń')}}
+                            {{__('Remove File')}}
                         </a>
                     </p>
                 </div>
