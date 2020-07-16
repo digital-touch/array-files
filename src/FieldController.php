@@ -22,6 +22,7 @@ class FieldController extends Controller
 
         $data = [
             'originalName' => $request->file('file')->getClientOriginalName(),
+            'editableName' => $request->file('file')->getClientOriginalName(),
             'name' => $file,
             'url' => Storage::url($file),
         ];
