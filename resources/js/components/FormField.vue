@@ -24,7 +24,7 @@
           class="no-underline flex flex-col items-center justify-center bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded"
           type="button"
       >
-        <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+        <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink"
              viewBox="0 0 477.863 477.863" xml:space="preserve">
           <path d="M409.598,153.596h-85.333c-9.426,0-17.067,7.641-17.067,17.067s7.641,17.067,17.067,17.067h85.333
@@ -53,7 +53,7 @@
              style="-ms-word-wrap: break-word;word-wrap: break-word;">
 
           <div class="flex flex-row items-center justify-center flex-1 text-white px-1 pb-2">
-            <svg class="w-16 h-16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+            <svg class="w-8 h-8 ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink"
                  viewBox="0 0 512 512" xml:space="preserve">
               <path d="M464.217,114.566L352.913,3.261C350.831,1.169,348.004,0,345.043,0H77.913
@@ -73,7 +73,7 @@
             </svg>
 
             <a v-show="!originalNameInputVisible[index]" :href="file.url"
-               class="inline-block m-2 p-2 text-base text-left text-white no-underline w-full"
+               class="inline-block m-2 pr-2 text-base text-left text-white no-underline w-full"
                target="_blank">{{ file.originalName }}</a>
 
             <input v-show="originalNameInputVisible[index]"
@@ -124,7 +124,7 @@
             <a @click.prevent="prevIndex(index)" v-if="files ? index > 0 : false"
                v-show="!originalNameInputVisible[index]"
                class="o-underline cursor-pointer flex flex-col items-center justify-center bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded mr-2">
-              <svg class="w-8 h-8 m-2" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+              <svg class="w-6 h-6 m-2" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                    fill="currentColor"
                    clip-rule="evenodd" viewBox="0 0 24 24">
                 <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"/>
@@ -135,7 +135,7 @@
             <a @click.prevent="editOriginalName(index)"
                v-show="!originalNameInputVisible[index]"
                class="no-underline cursor-pointer flex flex-col items-center justify-center bg-primary hover:bg-primary-light text-white font-bold py-2 px-4 rounded mr-2">
-              <svg class="w-8 h-8 m-2" viewBox="0 0 512 512"
+              <svg class="w-6 h-6 m-2" viewBox="0 0 512 512"
                    fill="currentColor"
                    xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -146,8 +146,9 @@
             <a @click.prevent="deleteFile(index)"
                v-show="!originalNameInputVisible[index]"
                class="no-underline cursor-pointer flex flex-col items-center justify-center bg-danger hover:bg-danger-dark text-white font-bold py-2 px-4 rounded">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 m-2"
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 m-2"
                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                   viewBox="0 0 24 24"
                    stroke-linejoin="round">
                 <polyline points="3 6 5 6 21 6"></polyline>
                 <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -159,7 +160,7 @@
             <a @click.prevent="nextIndex(index)" v-if="files ? index < (files.length - 1):false"
                v-show="!originalNameInputVisible[index]"
                class="no-underline cursor-pointer flex flex-col items-center justify-center bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded ml-2">
-              <svg class="w-8 h-8 m-2" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+              <svg class="w-6 h-6 m-2" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                    viewBox="0 0 24 24" fill="currentColor"
                    clip-rule="evenodd">
                 <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
