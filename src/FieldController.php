@@ -2,9 +2,9 @@
 
 namespace Halimtuhu\ArrayFiles;
 
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\Request;
 
 class FieldController extends Controller
 {
@@ -18,12 +18,15 @@ class FieldController extends Controller
         $disk = $request->disk ? $request->disk : 'public';
         $path = $request->path ? $request->path : '/';
 
-        $file = Storage::disk($disk)->putFile($path, $request->file('file'));
+        $file = $request->file('file');
+        $fileName = $file->getClientOriginalName();
+        $fileExt = $file->getClientOriginalExtension();
+        $savedFileName = Storage::disk($disk)->putFileAs($path, $file, $fileName . '.' . $fileExt);
 
         $data = [
             'originalName' => $request->file('file')->getClientOriginalName(),
             'editableName' => $request->file('file')->getClientOriginalName(),
-            'name' => $file,
+            'name' => $savedFileName,
             'url' => Storage::url($file),
         ];
 
