@@ -20,8 +20,7 @@ class FieldController extends Controller
 
         $file = $request->file('file');
         $fileName = $file->getClientOriginalName();
-        $fileExt = $file->getClientOriginalExtension();
-        $savedFileName = Storage::disk($disk)->putFileAs($path, $file, $fileName . '.' . $fileExt);
+        $savedFileName = Storage::disk($disk)->putFileAs($path, $file, $fileName);
 
         $data = [
             'originalName' => $request->file('file')->getClientOriginalName(),
